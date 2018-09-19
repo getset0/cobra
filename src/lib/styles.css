@@ -1,0 +1,64 @@
+@font-face {
+  font-family: 'Orbitron-Black';
+  src: local('Orbitron-Black'), url(./fonts/Orbitron-Black.ttf) format('ttf');
+}
+
+@font-face {
+  font-family: 'Orbitron-Bold';
+  src: local('Orbitron-Bold'), url(./fonts/Orbitron-Bold.ttf) format('ttf');
+}
+
+@font-face {
+  font-family: 'Orbitron-Medium';
+  src: local('Orbitron-Medium'), url(./fonts/Orbitron-Medium.ttf) format('ttf');
+}
+
+@font-face {
+  font-family: 'Orbitron-Regular';
+  src: local('Orbitron-Regular'), url(./fonts/Orbitron-Regular.ttf) format('ttf');
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  line-height: 1em;
+  font-weight: 300;
+  color: #4A4A4A;
+  margin: 0;
+}
+
+::placeholder {
+  color: #c0c0c0;
+}
+
+h1,
+h2,
+h3{
+  margin: 0 0 10px;
+  font-weight: 600;
+  font-family: 'Orbitron-Regular';
+}
+
+h1 {
+  font-size: 2.75em;
+  line-height: 1.3em;
+}
+
+h2 {
+  font-size: 2.25em;
+  line-height: 1.2em;
+}
+
+h3 {
+  font-size: 1.75em;
+  line-height: 1.1em;
+}
+
+p {
+  margin-bottom: 14px;
+}
+
+strong,
+b {
+    font-weight: 600;
+}
