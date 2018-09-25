@@ -2,15 +2,19 @@ import React from "react";
 import styled, { css } from "styled-components";
 
 const DropdownWrapper = styled.div`
-  max-width: ${props => props.maxWidth || "130px"};
+  width: ${props => props.maxWidth || "130px"};
+  max-width: 180px;
   border-radius: 3px;
   transition: all .3s ease-out;
+  z-index: 99;
   ${props => props.withBorder && (
     props.isOpen ? css`
       border: 1px solid #D8D8D8;
       box-shadow: 1px 2px 3px #D8D8D8;
+      background: ${props.theme.whiteColor};
     ` : css`
       border: 1px solid transparent;
+      background: transparent;
       box-shadow: 1px 2px 3px transparent;
   `)}
 `;

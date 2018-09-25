@@ -57,6 +57,33 @@ storiesOf("Header", module)
     <ThemeProvider theme={theme}>
       <Header />
     </ThemeProvider>
+  ))
+  .add("Dropdown", () => (
+    <ThemeProvider theme={theme}>
+      <Header
+        RightComponent={
+          <Dropdown withBorder>
+            {({ isOpen, handleTriggerClick }) => (
+              <React.Fragment>
+                <DropdownTrigger onClick={handleTriggerClick}>
+                  <DropdownButton isOpen={isOpen}>
+                    Trigger
+                  </DropdownButton>
+                </DropdownTrigger>
+                <DropdownBody isOpen={isOpen}>
+                  <List>
+                    <ListItem onClick={() => console.log("item1")}>item1</ListItem>
+                    <ListItem onClick={() => console.log("item2")}>item2</ListItem>
+                    <ListItem onClick={() => console.log("item3")}>item3</ListItem>
+                    <ListItem onClick={() => console.log("item4")}>item4</ListItem>
+                  </List>
+                </DropdownBody>
+              </React.Fragment>
+            )}
+          </Dropdown>
+        }
+      />
+    </ThemeProvider>
   ));
 
 storiesOf("Card", module)

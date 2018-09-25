@@ -10,7 +10,7 @@ export const theme = {
   darkBlueColor: "#02469B",
   darkestBlueColor: "#02254D",
   whiteColor: "#ffffff",
-  whiteBackgroundColor: "#f7f7f7",
+  whiteBackgroundColor: "#fdfdfd",
   lightGrayColor: "#D8D8D8",
   mediumGrayColor: "#979797",
   darkGrayColor: "#4A4A4A",

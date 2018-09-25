@@ -14,11 +14,12 @@ export const DropdownButton = styled.div`
 `;
 
 export const DropdownBody = styled.div`
-  position: relative;
   transition: all .3s ease-out;
   overflow: hidden;
   width: 100%;
   height: 100%;
+  z-index: 99;
+  background: ${props => props.theme.whiteColor};
   ${props => props.isOpen ? css`
     max-height: 200px;
   ` : css`
