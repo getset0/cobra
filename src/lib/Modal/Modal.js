@@ -2,9 +2,10 @@ import styled from "styled-components";
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
-import H2 from "./Typography/H2";
+import H2 from "../Typography/H2";
+import PropTypes from "prop-types";
 
-const ModalWrapper = styled.div`
+export const ModalWrapper = styled.div`
   position: fixed;
   top: 0;
   left: 0;
@@ -19,7 +20,7 @@ const ModalWrapper = styled.div`
   z-index: 990;
 `;
 
-const ModalContent = styled.div`
+export const ModalContent = styled.div`
   position: relative;
   width: 475px;
   height: 400px;
@@ -28,13 +29,13 @@ const ModalContent = styled.div`
   z-index: 999;
 `;
 
-const TitleWrapper = styled.div`
+export const TitleWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   padding: 5px;
 `;
 
-const CustomModalContent = ({ children, id, title, handleCloseModal }) => (
+export const CustomModalContent = ({ children, id, title, handleCloseModal }) => (
   <ModalContent id={id}>
     <TitleWrapper>
       <H2>{title}</H2>
@@ -53,8 +54,12 @@ const CustomModalContent = ({ children, id, title, handleCloseModal }) => (
 
 class CustomModal extends React.Component {
   handleOverlayClick = (e) => {
-    e.stopPropagation();
-    e.target.id === "modal-overlay" && this.props.handleCloseModal();
+    if (e) {
+      e.stopPropagation();
+      e.target.id === "modal-overlay" && this.props.handleCloseModal();
+    } else {
+      this.props.handleCloseModal();
+    }
   }
   render() {
     const { isOpen, children, title, handleCloseModal } = this.props;
@@ -72,5 +77,16 @@ class CustomModal extends React.Component {
   }
 }
 
+CustomModal.propTypes = {
+  children: PropTypes.any.isRequired,
+  isOpen: PropTypes.bool.isRequired,
+  handleCloseModal: PropTypes.func.isRequired,
+  title: PropTypes.string
+};
+
+CustomModal.defaultProps = {
+  isOpen: false,
+  title: "Modal title"
+};
 
 export default CustomModal;

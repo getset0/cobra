@@ -1,8 +1,10 @@
 import React from "react";
 import styled, { css } from "styled-components";
+import PropTypes from "prop-types";
+import { theme } from "../constants";
 
 const DropdownWrapper = styled.div`
-  width: ${props => props.maxWidth || "130px"};
+  width: ${props => `${props.width}px`};
   max-width: 180px;
   border-radius: 3px;
   transition: all .3s ease-out;
@@ -20,28 +22,27 @@ const DropdownWrapper = styled.div`
 `;
 
 class Dropdown extends React.Component {
-  state = { isOpen: false };
-  getState(state = this.state) {
-    return {
-      isOpen:
-        this.props.isOpen || state.isOpen
+  constructor(props) {
+    super(props);
+    this.state = {
+      isOpen: this.props.isOpen || false
     };
   }
-  handleTriggerClick = index => {
+  handleTriggerClick = () => {
     this.setState((prevState) => ({ isOpen: !prevState.isOpen }),  () =>
-      this.props.onStateChange && this.props.onStateChange(index)
+      this.props.onStateChange && this.props.onStateChange(this.state.isOpen)
     );
   }
   render() {
     return (
       <DropdownWrapper
-        isOpen={this.getState().isOpen}
+        isOpen={this.state.isOpen}
         withBorder={this.props.withBorder}
-        maxWidth={this.props.maxWidth}
+        width={this.props.width}
       >
         {
           this.props.children({
-            isOpen: this.getState().isOpen,
+            isOpen: this.state.isOpen,
             handleTriggerClick: this.handleTriggerClick
           })
         }
@@ -49,6 +50,22 @@ class Dropdown extends React.Component {
     );
   }
 }
+
+Dropdown.propTypes = {
+  withBorder: PropTypes.bool,
+  isOpen: PropTypes.bool,
+  width: PropTypes.number,
+  theme: PropTypes.object,
+  onStateChange: PropTypes.func,
+  children: PropTypes.any.isRequired
+};
+
+Dropdown.defaultProps = {
+  withBorder: true,
+  isOpen: false,
+  width: 130,
+  theme: theme
+};
 
 export default Dropdown;
 

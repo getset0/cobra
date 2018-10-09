@@ -1,0 +1,94 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders List with ListItems correctly 1`] = `
+.c0 {
+  list-style: none;
+  margin: 0;
+  padding: 0px;
+}
+
+.c0 > li {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+<ul
+  className="c0"
+>
+  <styled.li
+    theme={
+      Object {
+        "blackColor": "#000000",
+        "darkBlueColor": "#02469B",
+        "darkGrayColor": "#4A4A4A",
+        "darkestBlueColor": "#02254D",
+        "darkestGrayColor": "#303030",
+        "greenColor": "#76B041",
+        "lightBlueColor": "#0190D0",
+        "lightGrayColor": "#D8D8D8",
+        "lightestBlueColor": "#00FEFE",
+        "mediumGrayColor": "#979797",
+        "primaryColor": "#1676B7",
+        "secondaryColor": "#17BEBB",
+        "whiteBackgroundColor": "#fdfdfd",
+        "whiteColor": "#ffffff",
+        "yellowColor": "#FFC914",
+      }
+    }
+  >
+    1
+  </styled.li>
+  <styled.li
+    theme={
+      Object {
+        "blackColor": "#000000",
+        "darkBlueColor": "#02469B",
+        "darkGrayColor": "#4A4A4A",
+        "darkestBlueColor": "#02254D",
+        "darkestGrayColor": "#303030",
+        "greenColor": "#76B041",
+        "lightBlueColor": "#0190D0",
+        "lightGrayColor": "#D8D8D8",
+        "lightestBlueColor": "#00FEFE",
+        "mediumGrayColor": "#979797",
+        "primaryColor": "#1676B7",
+        "secondaryColor": "#17BEBB",
+        "whiteBackgroundColor": "#fdfdfd",
+        "whiteColor": "#ffffff",
+        "yellowColor": "#FFC914",
+      }
+    }
+  >
+    2
+  </styled.li>
+  <styled.li
+    theme={
+      Object {
+        "blackColor": "#000000",
+        "darkBlueColor": "#02469B",
+        "darkGrayColor": "#4A4A4A",
+        "darkestBlueColor": "#02254D",
+        "darkestGrayColor": "#303030",
+        "greenColor": "#76B041",
+        "lightBlueColor": "#0190D0",
+        "lightGrayColor": "#D8D8D8",
+        "lightestBlueColor": "#00FEFE",
+        "mediumGrayColor": "#979797",
+        "primaryColor": "#1676B7",
+        "secondaryColor": "#17BEBB",
+        "whiteBackgroundColor": "#fdfdfd",
+        "whiteColor": "#ffffff",
+        "yellowColor": "#FFC914",
+      }
+    }
+  >
+    3
+  </styled.li>
+</ul>
+`;

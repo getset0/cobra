@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import PropTypes from "prop-types";
+import { theme } from "../constants";
 
 const Link = styled.a`
   text-decoration: none;
@@ -19,5 +21,14 @@ const Link = styled.a`
       opacity: 1;
   }
 `;
+
+Link.propTypes = {
+  children: PropTypes.any.isRequired,
+  theme: PropTypes.object
+};
+
+Link.defaultProps = {
+  theme: theme
+};
 
 export default Link;

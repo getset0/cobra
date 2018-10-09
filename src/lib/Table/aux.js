@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import PropTypes from "prop-types";
+import { theme } from "../constants";
 
 export const TableHeader = styled.th`
   padding: 6px;
@@ -10,6 +12,14 @@ export const TableHeader = styled.th`
   color: ${props => props.theme.primaryColor}
 `;
 
+TableHeader.propTypes = {
+  theme: PropTypes.object
+};
+
+TableHeader.defaultProps = {
+  theme: theme
+};
+
 export const TableRow = styled.tr`
   border-top: 1px solid ${props => props.theme.lightGrayColor};
   &:first-child {
@@ -19,6 +29,14 @@ export const TableRow = styled.tr`
     border-bottom: 1px solid ${props => props.theme.lightGrayColor};
   }
 `;
+
+TableRow.propTypes = {
+  theme: PropTypes.object
+};
+
+TableRow.defaultProps = {
+  theme: theme
+};
 
 export const TableData = styled.td`
   padding: 12px 6px;

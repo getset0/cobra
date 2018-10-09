@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import PropTypes from "prop-types";
 
 const List = styled.ul`
   list-style: none;
@@ -22,5 +23,12 @@ const List = styled.ul`
     `}
   }
 `;
+
+List.propTypes = {
+  center: PropTypes.bool,
+  spaceAround: PropTypes.bool,
+  spaceBetween: PropTypes.bool,
+  end: PropTypes.bool
+};
 
 export default List;

@@ -1,4 +1,6 @@
 import styled, { css } from "styled-components";
+import PropTypes from "prop-types";
+import { theme } from "../constants";
 
 export const TabButtons = styled.div`
   display: flex;
@@ -6,6 +8,10 @@ export const TabButtons = styled.div`
   justify-content: space-around;
   text-transform: uppercase;
 `;
+
+TabButtons.propTypes = {
+  children: PropTypes.array.isRequired
+};
 
 export const TabButton = styled.div`
   cursor: pointer;
@@ -32,10 +38,25 @@ export const TabButton = styled.div`
   `}
 `;
 
+TabButton.propTypes = {
+  theme: PropTypes.object,
+  width: PropTypes.number.isRequired,
+  isSelected: PropTypes.bool.isRequired,
+  onClick: PropTypes.func.isRequired
+};
+
+TabButton.defaultProps = {
+  theme: theme
+};
+
 export const TabItems = styled.div`
   position: relative;
   min-height: 160px;
 `;
+
+TabButtons.propTypes = {
+  children: PropTypes.array.isRequired
+};
 
 export const TabItem = styled.div`
   position: absolute;
@@ -48,3 +69,7 @@ export const TabItem = styled.div`
     opacity: 0;
   `}
 `;
+
+TabButton.propTypes = {
+  isSelected: PropTypes.bool.isRequired
+};

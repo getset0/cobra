@@ -1,4 +1,6 @@
 import styled, { css } from "styled-components";
+import PropTypes from "prop-types";
+import { theme } from "../constants";
 
 export const DropdownTrigger = styled.div`
   cursor: pointer;
@@ -13,6 +15,15 @@ export const DropdownButton = styled.div`
   `}
 `;
 
+DropdownButton.propTypes = {
+  isOpen: PropTypes.bool,
+  theme: PropTypes.object
+};
+
+DropdownButton.defaultProps = {
+  theme: theme
+};
+
 export const DropdownBody = styled.div`
   transition: all .3s ease-out;
   overflow: hidden;
@@ -26,3 +37,13 @@ export const DropdownBody = styled.div`
     max-height: 0;
   `}
 `;
+
+DropdownBody.propTypes = {
+  isOpen: PropTypes.bool,
+  theme: PropTypes.object,
+  children: PropTypes.any.isRequired
+};
+
+DropdownBody.defaultProps = {
+  theme: theme
+};

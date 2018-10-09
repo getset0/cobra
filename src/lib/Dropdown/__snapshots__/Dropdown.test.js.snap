@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders Dropdown correctly 1`] = `
+<styled.div
+  isOpen={false}
+  width={130}
+  withBorder={true}
+>
+  <styled.div
+    onClick={[Function]}
+  >
+    Trigger
+  </styled.div>
+  <styled.div
+    isOpen={false}
+    theme={
+      Object {
+        "blackColor": "#000000",
+        "darkBlueColor": "#02469B",
+        "darkGrayColor": "#4A4A4A",
+        "darkestBlueColor": "#02254D",
+        "darkestGrayColor": "#303030",
+        "greenColor": "#76B041",
+        "lightBlueColor": "#0190D0",
+        "lightGrayColor": "#D8D8D8",
+        "lightestBlueColor": "#00FEFE",
+        "mediumGrayColor": "#979797",
+        "primaryColor": "#1676B7",
+        "secondaryColor": "#17BEBB",
+        "whiteBackgroundColor": "#fdfdfd",
+        "whiteColor": "#ffffff",
+        "yellowColor": "#FFC914",
+      }
+    }
+  >
+    Body
+  </styled.div>
+</styled.div>
+`;

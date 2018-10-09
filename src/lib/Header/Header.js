@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import React from "react";
+import PropTypes from "prop-types";
+import { theme } from "../constants";
 
 const HeaderItemWrapper = styled.a`
   text-decoration: none;
@@ -7,20 +9,20 @@ const HeaderItemWrapper = styled.a`
   color: ${props => props.theme.primaryColor};
 `;
 
-const CustomHeader = ({ Logo, RightComponent, user, ...props }) => (
+const CustomHeader = ({ logo, headerCustomRight, user, ...props }) => (
   <header {...props}>
     <div>
       <HeaderItemWrapper href="/">
-        {Logo || "Brand"}
+        {logo}
       </HeaderItemWrapper>
     </div>
     {
-      RightComponent ?
+      headerCustomRight ?
         <div>
-          {RightComponent}
+          {headerCustomRight}
         </div> :
         <HeaderItemWrapper>
-          {user || "John Doe"}
+          {user}
         </HeaderItemWrapper>
     }
   </header>
@@ -36,5 +38,19 @@ const Header = styled(CustomHeader)`
   z-index: 98;
   justify-content: space-between;
 `;
+
+Header.propTypes = {
+  backgroundColor: PropTypes.string,
+  user: PropTypes.string,
+  logo: PropTypes.oneOfType([ PropTypes.string, PropTypes.node, PropTypes.element ]),
+  headerCustomRight: PropTypes.oneOfType([ PropTypes.string, PropTypes.node, PropTypes.element ]),
+  theme: PropTypes.object
+};
+
+Header.defaultProps = {
+  user: "John Doe",
+  logo: "Brand",
+  theme: theme
+};
 
 export default Header;

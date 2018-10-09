@@ -1,0 +1,74 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders Tabs correctly 1`] = `
+<Fragment>
+  <styled.div>
+    <styled.div
+      id="test"
+      isSelected={true}
+      key="Test"
+      onClick={[Function]}
+      theme={
+        Object {
+          "blackColor": "#000000",
+          "darkBlueColor": "#02469B",
+          "darkGrayColor": "#4A4A4A",
+          "darkestBlueColor": "#02254D",
+          "darkestGrayColor": "#303030",
+          "greenColor": "#76B041",
+          "lightBlueColor": "#0190D0",
+          "lightGrayColor": "#D8D8D8",
+          "lightestBlueColor": "#00FEFE",
+          "mediumGrayColor": "#979797",
+          "primaryColor": "#1676B7",
+          "secondaryColor": "#17BEBB",
+          "whiteBackgroundColor": "#fdfdfd",
+          "whiteColor": "#ffffff",
+          "yellowColor": "#FFC914",
+        }
+      }
+      width={50}
+    >
+      Test
+    </styled.div>
+    <styled.div
+      id="test2"
+      isSelected={false}
+      key="Test2"
+      onClick={[Function]}
+      theme={
+        Object {
+          "blackColor": "#000000",
+          "darkBlueColor": "#02469B",
+          "darkGrayColor": "#4A4A4A",
+          "darkestBlueColor": "#02254D",
+          "darkestGrayColor": "#303030",
+          "greenColor": "#76B041",
+          "lightBlueColor": "#0190D0",
+          "lightGrayColor": "#D8D8D8",
+          "lightestBlueColor": "#00FEFE",
+          "mediumGrayColor": "#979797",
+          "primaryColor": "#1676B7",
+          "secondaryColor": "#17BEBB",
+          "whiteBackgroundColor": "#fdfdfd",
+          "whiteColor": "#ffffff",
+          "yellowColor": "#FFC914",
+        }
+      }
+      width={50}
+    >
+      Test2
+    </styled.div>
+  </styled.div>
+  <styled.div>
+    <styled.div
+      isSelected={true}
+      key="0"
+    />
+    <styled.div
+      isSelected={false}
+      key="1"
+    />
+  </styled.div>
+</Fragment>
+`;

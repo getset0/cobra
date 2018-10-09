@@ -1,4 +1,6 @@
 import styled, { css } from "styled-components";
+import PropTypes from "prop-types";
+import { theme } from "../constants";
 
 const Button = styled.button`
   line-height: 40px;
@@ -68,7 +70,27 @@ const Button = styled.button`
       cursor: not-allowed;
     }
   `}
-
 `;
+
+Button.propTypes = {
+  disabled: PropTypes.bool,
+  secondary: PropTypes.bool,
+  primary: PropTypes.bool,
+  uppercase: PropTypes.bool,
+  large: PropTypes.bool,
+  small: PropTypes.bool,
+  children: PropTypes.any.isRequired,
+  theme: PropTypes.object
+};
+
+Button.defaultProps = {
+  disabled: false,
+  secondary: false,
+  primary: false,
+  uppercase: false,
+  large: false,
+  small: false,
+  theme: theme
+};
 
 export default Button;

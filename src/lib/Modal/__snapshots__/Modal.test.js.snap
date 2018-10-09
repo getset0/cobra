@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders Tabs correctly 1`] = `
+<styled.div
+  id="modal-overlay"
+  onClick={[Function]}
+>
+  <Component
+    handleCloseModal={[Function]}
+    id="modal-content"
+    title="I am a modal title"
+  >
+    I am a modal content!
+  </Component>
+</styled.div>
+`;

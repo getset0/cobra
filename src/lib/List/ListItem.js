@@ -1,4 +1,6 @@
 import styled, { css } from "styled-components";
+import PropTypes from "prop-types";
+import { theme } from "../constants";
 
 const ListItem = styled.li`
   padding: 12px 10px 12px 10px;
@@ -10,5 +12,14 @@ const ListItem = styled.li`
     border-top: 0;
   }
 `;
+
+ListItem.propTypes = {
+  onClick: PropTypes.func,
+  theme: PropTypes.object
+};
+
+ListItem.defaultProps = {
+  theme: theme
+};
 
 export default ListItem;

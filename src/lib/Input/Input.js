@@ -2,10 +2,12 @@ import styled, { css } from "styled-components";
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import PropTypes from "prop-types";
+import { theme } from "../constants";
 
 // the width of the input border is controled by the padding attribute
 const InputWrapperSpan = styled.span`
-  position:relative;
+  position: relative;
   margin: 7px 4px;
   background: linear-gradient(21deg, ${props => props.theme.darkestBlueColor}, ${props => props.theme.lightBlueColor});
   padding: 3px;
@@ -15,9 +17,7 @@ const InputWrapperSpan = styled.span`
   ${props => props.disabled && css`
       background: ${props => props.theme.lightGrayColor};
   `}
-
 `;
-
 
 // margin should be a bit bigger then InputWrapperSpan padding
 const InputInnerSpan = styled.span`
@@ -53,8 +53,8 @@ const Input = styled.input`
   border-radius: inherit;
   line-height: 1.5em;
   margin: 0;
-  width: ${props => props.width};
-  height: ${props => props.height};
+  width: ${props => props.width}px;
+  height: ${props => props.height}px;
   border: none;
   outline: none;
   font: 300 1em system-ui;
@@ -91,5 +91,18 @@ const CustomInput = ({ disabled, ...props }) => (
     <InputInnerSpan disabled={disabled} />
   </InputWrapperSpan>
 );
+
+CustomInput.propTypes = {
+  disabled: PropTypes.bool,
+  width: PropTypes.number,
+  height: PropTypes.number,
+  type: PropTypes.string,
+  theme: PropTypes.object
+};
+
+CustomInput.defaultProps = {
+  disabled: false,
+  theme: theme
+};
 
 export default CustomInput;

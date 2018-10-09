@@ -1,11 +1,11 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 class Tabs extends React.Component {
-  state = { selectedItem: 0 };
-  getState(state = this.state) {
-    return {
-      selectedItem:
-        this.props.selectedItem || state.selectedItem
+  constructor(props) {
+    super(props);
+    this.state = {
+      selectedItem: this.props.selectedItem || 0
     };
   }
   handleItemClick = index => {
@@ -15,11 +15,15 @@ class Tabs extends React.Component {
   }
   render() {
     return this.props.children({
-      selectedItem: this.getState().selectedItem,
+      selectedItem: this.state.selectedItem,
       handleItemClick: this.handleItemClick
     });
   }
 }
+
+Tabs.propTypes = {
+  children: PropTypes.func.isRequired
+};
 
 export default Tabs;
 
