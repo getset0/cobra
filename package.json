@@ -19,7 +19,9 @@
     "eject": "react-scripts eject",
     "lint": "./node_modules/.bin/eslint src",
     "storybook": "start-storybook -p 9009 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "prepublish": "npm run build",
+    "postinstall": "npm run build"
   },
   "lint-staged": {
     "*.js": [
