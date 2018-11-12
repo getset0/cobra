@@ -9,22 +9,18 @@ const HeaderItemWrapper = styled.a`
   color: ${props => props.theme.primaryColor};
 `;
 
-const CustomHeader = ({ logo, headerCustomRight, user, ...props }) => (
+const CustomHeader = ({ logo, headerCustomRight, user, theme, ...props }) => (
   <header {...props}>
     <div>
-      <HeaderItemWrapper href="/">
+      <HeaderItemWrapper href="/" theme={theme}>
         {logo}
       </HeaderItemWrapper>
     </div>
-    {
-      headerCustomRight ?
-        <div>
-          {headerCustomRight}
-        </div> :
-        <HeaderItemWrapper>
-          {user}
-        </HeaderItemWrapper>
-    }
+    {headerCustomRight ? (
+      <div>{headerCustomRight}</div>
+    ) : (
+      <HeaderItemWrapper>{user}</HeaderItemWrapper>
+    )}
   </header>
 );
 
@@ -42,8 +38,16 @@ const Header = styled(CustomHeader)`
 Header.propTypes = {
   backgroundColor: PropTypes.string,
   user: PropTypes.string,
-  logo: PropTypes.oneOfType([ PropTypes.string, PropTypes.node, PropTypes.element ]),
-  headerCustomRight: PropTypes.oneOfType([ PropTypes.string, PropTypes.node, PropTypes.element ]),
+  logo: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.node,
+    PropTypes.element
+  ]),
+  headerCustomRight: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.node,
+    PropTypes.element
+  ]),
   theme: PropTypes.object
 };
 

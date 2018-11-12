@@ -9,41 +9,47 @@ import { theme } from "../constants";
 const InputWrapperSpan = styled.span`
   position: relative;
   margin: 7px 4px;
-  background: linear-gradient(21deg, ${props => props.theme.darkestBlueColor}, ${props => props.theme.lightBlueColor});
+  background: linear-gradient(
+    21deg,
+    ${props => props.theme.darkestBlueColor},
+    ${props => props.theme.lightBlueColor}
+  );
   padding: 3px;
   display: inline-block;
   border-radius: 9999em;
 
-  ${props => props.disabled && css`
+  ${props =>
+    props.disabled &&
+    css`
       background: ${props => props.theme.lightGrayColor};
-  `}
+    `}
 `;
 
 // margin should be a bit bigger then InputWrapperSpan padding
 const InputInnerSpan = styled.span`
-    transform: scale(.993, .94);
-    transition: transform .3s, opacity .2s;
-    opacity: 0;
+  transform: scale(0.993, 0.94);
+  transition: transform 0.3s, opacity 0.2s;
+  opacity: 0;
 
-    position:absolute;
-    z-index: 0;
-    margin: 4px;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    border-radius: inherit;
-    pointer-events: none;
+  position: absolute;
+  z-index: 0;
+  margin: 4px;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: inherit;
+  pointer-events: none;
 
-    box-shadow: inset 0 0 0 3px #fff,
-      0 0 0 4px #fff,
-      3px -3px 22px ${props => props.theme.darkestBlueColor},
-      -3px 3px 22px ${props => props.theme.lightBlueColor};
+  box-shadow: inset 0 0 0 3px #fff, 0 0 0 4px #fff,
+    3px -3px 22px ${props => props.theme.darkestBlueColor},
+    -3px 3px 22px ${props => props.theme.lightBlueColor};
 
-    ${props => props.disabled && css`
+  ${props =>
+    props.disabled &&
+    css`
       box-shadow: 0;
     `}
-
 `;
 
 // z-index should be above InputInnerSpan
@@ -58,11 +64,13 @@ const Input = styled.input`
   border: none;
   outline: none;
   font: 300 1em system-ui;
-  padding: .3em .75em;
+  padding: 0.3em 0.75em;
   z-index: 1;
-  ${props => props.type === "search" && css`
-    padding: .3em .75em .3em 1.7em;
-  `}
+  ${props =>
+    props.type === "search" &&
+    css`
+      padding: 0.3em 0.75em 0.3em 1.7em;
+    `}
 
   &:focus + span {
     opacity: 1;
@@ -81,14 +89,14 @@ const InputIconWrapper = styled.span`
 `;
 
 const CustomInput = ({ disabled, ...props }) => (
-  <InputWrapperSpan disabled={disabled}>
-    {props.type === "search" &&
+  <InputWrapperSpan theme={theme} disabled={disabled}>
+    {props.type === "search" && (
       <InputIconWrapper>
         <FontAwesomeIcon icon={faSearch} />
       </InputIconWrapper>
-    }
+    )}
     <Input disabled={disabled} {...props} />
-    <InputInnerSpan disabled={disabled} />
+    <InputInnerSpan theme={theme} disabled={disabled} />
   </InputWrapperSpan>
 );
 
