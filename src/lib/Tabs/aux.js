@@ -31,7 +31,9 @@ export const TabButton = styled.div`
     color: ${props => props.theme.primaryColor}
   }
 
-  ${props => props.isSelected && css`
+  ${props =>
+    props.isSelected &&
+    css`
     opacity: 1;
     border-bottom: 2px solid ${props => props.theme.primaryColor}
     color: ${props => props.theme.primaryColor}
@@ -52,6 +54,7 @@ TabButton.defaultProps = {
 export const TabItems = styled.div`
   position: relative;
   min-height: 160px;
+  height: 100%;
 `;
 
 TabButtons.propTypes = {
@@ -60,14 +63,17 @@ TabButtons.propTypes = {
 
 export const TabItem = styled.div`
   position: absolute;
-  transition: all .3s ease-out;
+  transition: all 0.3s ease-out;
   height: 100%;
   width: 100%;
-  ${props => props.isSelected ? css`
-    opacity: 1;
-  ` : css`
-    opacity: 0;
-  `}
+  ${props =>
+    props.isSelected
+      ? css`
+          opacity: 1;
+        `
+      : css`
+          opacity: 0;
+        `}
 `;
 
 TabButton.propTypes = {

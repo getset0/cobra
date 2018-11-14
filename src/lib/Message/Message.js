@@ -62,7 +62,6 @@ const Message = ({ type, text, ...props }) => {
 Message.propTypes = {
   type: PropTypes.oneOf([ "warning", "error", "success", "default" ]),
   width: PropTypes.number,
-  height: PropTypes.number,
   theme: PropTypes.object,
   text: PropTypes.string
 };

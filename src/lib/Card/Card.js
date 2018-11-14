@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import PropTypes from "prop-types";
 import { theme } from "../constants";
 
@@ -11,8 +11,8 @@ const Card = styled.div`
     overflow: hidden;
     border-radius: 5px;
     box-shadow: 1px 2px 10px 1px ${props => props.theme.lightGrayColor};
-    width: ${props => props.width}px
-    height: ${props => props.height}px
+    width: ${props => props.width}px;
+    height: ${props => props.height}px;
 `;
 
 Card.propTypes = {
