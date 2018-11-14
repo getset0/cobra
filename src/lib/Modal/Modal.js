@@ -13,7 +13,7 @@ export const ModalWrapper = styled.div`
   bottom: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, .75);
+  background: rgba(0, 0, 0, 0.75);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -35,32 +35,32 @@ export const TitleWrapper = styled.div`
   padding: 5px;
 `;
 
-export const CustomModalContent = ({ children, id, title, handleCloseModal }) => (
+export const CustomModalContent = ({
+  children,
+  id,
+  title,
+  handleCloseModal
+}) => (
   <ModalContent id={id}>
     <TitleWrapper>
       <H2>{title}</H2>
       <span style={{ fontSize: "18px", cursor: "pointer" }}>
-        <FontAwesomeIcon
-          icon={faTimes}
-          onClick={handleCloseModal}
-        />
+        <FontAwesomeIcon icon={faTimes} onClick={handleCloseModal} />
       </span>
     </TitleWrapper>
-    <div>
-      {children}
-    </div>
+    <div>{children}</div>
   </ModalContent>
 );
 
-class CustomModal extends React.Component {
-  handleOverlayClick = (e) => {
+class CustomModal extends React.PureComponent {
+  handleOverlayClick = e => {
     if (e) {
       e.stopPropagation();
       e.target.id === "modal-overlay" && this.props.handleCloseModal();
     } else {
       this.props.handleCloseModal();
     }
-  }
+  };
   render() {
     const { isOpen, children, title, handleCloseModal } = this.props;
     return isOpen ? (

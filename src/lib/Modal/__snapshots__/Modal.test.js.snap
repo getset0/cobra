@@ -5,12 +5,12 @@ exports[`renders Tabs correctly 1`] = `
   id="modal-overlay"
   onClick={[Function]}
 >
-  <Component
-    handleCloseModal={[Function]}
+  <CustomModalContent
+    handleCloseModal={[MockFunction]}
     id="modal-content"
     title="I am a modal title"
   >
     I am a modal content!
-  </Component>
+  </CustomModalContent>
 </styled.div>
 `;

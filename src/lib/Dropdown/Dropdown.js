@@ -7,21 +7,24 @@ const DropdownWrapper = styled.div`
   width: ${props => `${props.width}px`};
   max-width: 180px;
   border-radius: 3px;
-  transition: all .3s ease-out;
+  transition: all 0.3s ease-out;
   z-index: 99;
-  ${props => props.withBorder && (
-    props.isOpen ? css`
-      border: 1px solid #D8D8D8;
-      box-shadow: 1px 2px 3px #D8D8D8;
-      background: ${props.theme.whiteColor};
-    ` : css`
-      border: 1px solid transparent;
-      background: transparent;
-      box-shadow: 1px 2px 3px transparent;
-  `)}
+  ${props =>
+    props.withBorder &&
+    (props.isOpen
+      ? css`
+          border: 1px solid #d8d8d8;
+          box-shadow: 1px 2px 3px #d8d8d8;
+          background: ${props.theme.whiteColor};
+        `
+      : css`
+          border: 1px solid transparent;
+          background: transparent;
+          box-shadow: 1px 2px 3px transparent;
+        `)}
 `;
 
-class Dropdown extends React.Component {
+class Dropdown extends React.PureComponent {
   constructor(props) {
     super(props);
     this.state = {
@@ -29,10 +32,12 @@ class Dropdown extends React.Component {
     };
   }
   handleTriggerClick = () => {
-    this.setState((prevState) => ({ isOpen: !prevState.isOpen }),  () =>
-      this.props.onStateChange && this.props.onStateChange(this.state.isOpen)
+    this.setState(
+      prevState => ({ isOpen: !prevState.isOpen }),
+      () =>
+        this.props.onStateChange && this.props.onStateChange(this.state.isOpen)
     );
-  }
+  };
   render() {
     return (
       <DropdownWrapper
@@ -40,12 +45,10 @@ class Dropdown extends React.Component {
         withBorder={this.props.withBorder}
         width={this.props.width}
       >
-        {
-          this.props.children({
-            isOpen: this.state.isOpen,
-            handleTriggerClick: this.handleTriggerClick
-          })
-        }
+        {this.props.children({
+          isOpen: this.state.isOpen,
+          handleTriggerClick: this.handleTriggerClick
+        })}
       </DropdownWrapper>
     );
   }
@@ -68,5 +71,3 @@ Dropdown.defaultProps = {
 };
 
 export default Dropdown;
-
-

@@ -60,7 +60,6 @@ const Input = styled.input`
   line-height: 1.5em;
   margin: 0;
   width: ${props => props.width}px;
-  height: ${props => props.height}px;
   border: none;
   outline: none;
   font: 300 1em system-ui;
@@ -110,7 +109,8 @@ CustomInput.propTypes = {
 
 CustomInput.defaultProps = {
   disabled: false,
-  theme: theme
+  theme: theme,
+  width: 200
 };
 
 export default CustomInput;

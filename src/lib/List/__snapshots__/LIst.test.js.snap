@@ -1,25 +1,56 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders List with ListItems correctly 1`] = `
-.c0 {
+<StyledComponent
+  forwardedClass={
+    Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "attrs": Array [],
+      "componentStyle": ComponentStyle {
+        "componentId": "sc-bwzfXH",
+        "isStatic": false,
+        "lastClassName": "daEYVW",
+        "rules": Array [
+          "
   list-style: none;
   margin: 0;
   padding: 0px;
-}
 
-.c0 > li {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-}
-
-<ul
-  className="c0"
+  > li {
+    display: flex;
+    justify-content: flex-start;
+    ",
+          [Function],
+          "
+    ",
+          [Function],
+          "
+    ",
+          [Function],
+          "
+    ",
+          [Function],
+          "
+  }
+",
+        ],
+      },
+      "displayName": "styled.ul",
+      "propTypes": Object {
+        "center": [Function],
+        "end": [Function],
+        "spaceAround": [Function],
+        "spaceBetween": [Function],
+      },
+      "render": [Function],
+      "styledComponentId": "sc-bwzfXH",
+      "target": "ul",
+      "toString": [Function],
+      "warnTooManyClasses": [Function],
+      "withComponent": [Function],
+    }
+  }
+  forwardedRef={null}
 >
   <styled.li
     theme={
@@ -90,5 +121,5 @@ exports[`renders List with ListItems correctly 1`] = `
   >
     3
   </styled.li>
-</ul>
+</StyledComponent>
 `;

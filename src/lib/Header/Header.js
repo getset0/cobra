@@ -18,9 +18,9 @@ const CustomHeader = ({ logo, headerCustomRight, user, theme, ...props }) => (
     </div>
     {headerCustomRight ? (
       <div>{headerCustomRight}</div>
-    ) : (
+    ) : user ? (
       <HeaderItemWrapper>{user}</HeaderItemWrapper>
-    )}
+    ) : null}
   </header>
 );
 
@@ -52,7 +52,6 @@ Header.propTypes = {
 };
 
 Header.defaultProps = {
-  user: "John Doe",
   logo: "Brand",
   theme: theme
 };

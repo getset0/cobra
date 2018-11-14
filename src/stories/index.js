@@ -29,7 +29,8 @@ import {
   TableData,
   Table,
   Input,
-  Modal
+  Modal,
+  Message
 } from "../lib";
 
 const testTabItems = [
@@ -99,17 +100,29 @@ storiesOf("Header", module)
     />
   ));
 
-storiesOf("Card", module).add("Simple", () => (
-  <div style={{ backgroundColor: "lightgray", padding: "20px" }}>
-    <Card>I am inside a card</Card>
-    <Card>I am a card</Card>
-    <Card>I am another card</Card>
-    <Card backgroundColor="#0000ff">I am a blue card</Card>
-    <Card backgroundColor="#0000ff" textColor="#fff">
-      I am a blue card with white text
-    </Card>
-  </div>
-));
+storiesOf("Card", module)
+  .add("Simple", () => (
+    <div style={{ padding: "20px" }}>
+      <Card>I am inside a card</Card>
+      <Card>I am a card</Card>
+      <Card>I am another card</Card>
+      <Card backgroundColor="#0000ff">I am a blue card</Card>
+      <Card backgroundColor="#0000ff" textColor="#fff">
+        I am a blue card with white text
+      </Card>
+    </div>
+  ))
+  .add("Dark Background", () => (
+    <div style={{ backgroundColor: "lightgray", padding: "20px" }}>
+      <Card>I am inside a card</Card>
+      <Card>I am a card</Card>
+      <Card>I am another card</Card>
+      <Card backgroundColor="#0000ff">I am a blue card</Card>
+      <Card backgroundColor="#0000ff" textColor="#fff">
+        I am a blue card with white text
+      </Card>
+    </div>
+  ));
 
 storiesOf("Typography", module)
   .add("Headers", () => (
@@ -139,6 +152,15 @@ storiesOf("Link", module).add("Simple Link", () => (
   </Link>
 ));
 
+storiesOf("Message", module).add("Messages", () => (
+  <React.Fragment>
+    <Message text="I am a default" />
+    <Message text="I am a warning" type="warning" />
+    <Message text="I am a success" type="success" />
+    <Message text="I am an error" type="error" />
+    <Message text="Test" width={100} />
+  </React.Fragment>
+));
 storiesOf("Button", module)
   .add("Normal", () => (
     <React.Fragment>

@@ -7,6 +7,7 @@ import Header from "./Header/Header";
 import Card from "./Card/Card";
 import Input from "./Input/Input";
 import Modal from "./Modal/Modal";
+import Message from "./Message/Message";
 import Tabs from "./Tabs/Tabs";
 import Dropdown from "./Dropdown/Dropdown";
 import Table from "./Table/Table";
@@ -18,10 +19,35 @@ import H1 from "./Typography/H1";
 import H2 from "./Typography/H2";
 import H3 from "./Typography/H3";
 import "./styles.css";
+import { theme } from "./constants";
 
 export {
-  Button, List, ListItem, Image, H1, H2, H3, Paragraph, Link,
-  Header, Card, Tabs, TabButtons, TabButton, TabItems, TabItem,
-  Dropdown, DropdownTrigger, DropdownBody, DropdownButton,
-  TableHeader, TableRow, TableData, Table, Input, Modal
+  Button,
+  List,
+  ListItem,
+  Image,
+  H1,
+  H2,
+  H3,
+  Paragraph,
+  Link,
+  Header,
+  Card,
+  Tabs,
+  TabButtons,
+  TabButton,
+  TabItems,
+  TabItem,
+  Dropdown,
+  DropdownTrigger,
+  DropdownBody,
+  DropdownButton,
+  TableHeader,
+  TableRow,
+  TableData,
+  Table,
+  Input,
+  Modal,
+  Message,
+  theme
 };

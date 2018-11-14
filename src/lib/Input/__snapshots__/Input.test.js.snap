@@ -3,6 +3,25 @@
 exports[`correctly renders disabled input 1`] = `
 <styled.span
   disabled={true}
+  theme={
+    Object {
+      "blackColor": "#000000",
+      "darkBlueColor": "#02469B",
+      "darkGrayColor": "#4A4A4A",
+      "darkestBlueColor": "#02254D",
+      "darkestGrayColor": "#303030",
+      "greenColor": "#76B041",
+      "lightBlueColor": "#0190D0",
+      "lightGrayColor": "#D8D8D8",
+      "lightestBlueColor": "#00FEFE",
+      "mediumGrayColor": "#979797",
+      "primaryColor": "#1676B7",
+      "secondaryColor": "#17BEBB",
+      "whiteBackgroundColor": "#fdfdfd",
+      "whiteColor": "#ffffff",
+      "yellowColor": "#FFC914",
+    }
+  }
 >
   <styled.input
     disabled={true}
@@ -26,9 +45,29 @@ exports[`correctly renders disabled input 1`] = `
         "yellowColor": "#FFC914",
       }
     }
+    width={200}
   />
   <styled.span
     disabled={true}
+    theme={
+      Object {
+        "blackColor": "#000000",
+        "darkBlueColor": "#02469B",
+        "darkGrayColor": "#4A4A4A",
+        "darkestBlueColor": "#02254D",
+        "darkestGrayColor": "#303030",
+        "greenColor": "#76B041",
+        "lightBlueColor": "#0190D0",
+        "lightGrayColor": "#D8D8D8",
+        "lightestBlueColor": "#00FEFE",
+        "mediumGrayColor": "#979797",
+        "primaryColor": "#1676B7",
+        "secondaryColor": "#17BEBB",
+        "whiteBackgroundColor": "#fdfdfd",
+        "whiteColor": "#ffffff",
+        "yellowColor": "#FFC914",
+      }
+    }
   />
 </styled.span>
 `;
@@ -36,6 +75,25 @@ exports[`correctly renders disabled input 1`] = `
 exports[`correctly renders password input 1`] = `
 <styled.span
   disabled={false}
+  theme={
+    Object {
+      "blackColor": "#000000",
+      "darkBlueColor": "#02469B",
+      "darkGrayColor": "#4A4A4A",
+      "darkestBlueColor": "#02254D",
+      "darkestGrayColor": "#303030",
+      "greenColor": "#76B041",
+      "lightBlueColor": "#0190D0",
+      "lightGrayColor": "#D8D8D8",
+      "lightestBlueColor": "#00FEFE",
+      "mediumGrayColor": "#979797",
+      "primaryColor": "#1676B7",
+      "secondaryColor": "#17BEBB",
+      "whiteBackgroundColor": "#fdfdfd",
+      "whiteColor": "#ffffff",
+      "yellowColor": "#FFC914",
+    }
+  }
 >
   <styled.input
     disabled={false}
@@ -60,9 +118,29 @@ exports[`correctly renders password input 1`] = `
       }
     }
     type="password"
+    width={200}
   />
   <styled.span
     disabled={false}
+    theme={
+      Object {
+        "blackColor": "#000000",
+        "darkBlueColor": "#02469B",
+        "darkGrayColor": "#4A4A4A",
+        "darkestBlueColor": "#02254D",
+        "darkestGrayColor": "#303030",
+        "greenColor": "#76B041",
+        "lightBlueColor": "#0190D0",
+        "lightGrayColor": "#D8D8D8",
+        "lightestBlueColor": "#00FEFE",
+        "mediumGrayColor": "#979797",
+        "primaryColor": "#1676B7",
+        "secondaryColor": "#17BEBB",
+        "whiteBackgroundColor": "#fdfdfd",
+        "whiteColor": "#ffffff",
+        "yellowColor": "#FFC914",
+      }
+    }
   />
 </styled.span>
 `;
@@ -70,6 +148,25 @@ exports[`correctly renders password input 1`] = `
 exports[`correctly renders password input 2`] = `
 <styled.span
   disabled={false}
+  theme={
+    Object {
+      "blackColor": "#000000",
+      "darkBlueColor": "#02469B",
+      "darkGrayColor": "#4A4A4A",
+      "darkestBlueColor": "#02254D",
+      "darkestGrayColor": "#303030",
+      "greenColor": "#76B041",
+      "lightBlueColor": "#0190D0",
+      "lightGrayColor": "#D8D8D8",
+      "lightestBlueColor": "#00FEFE",
+      "mediumGrayColor": "#979797",
+      "primaryColor": "#1676B7",
+      "secondaryColor": "#17BEBB",
+      "whiteBackgroundColor": "#fdfdfd",
+      "whiteColor": "#ffffff",
+      "yellowColor": "#FFC914",
+    }
+  }
 >
   <styled.input
     disabled={false}
@@ -94,9 +191,29 @@ exports[`correctly renders password input 2`] = `
       }
     }
     type="number"
+    width={200}
   />
   <styled.span
     disabled={false}
+    theme={
+      Object {
+        "blackColor": "#000000",
+        "darkBlueColor": "#02469B",
+        "darkGrayColor": "#4A4A4A",
+        "darkestBlueColor": "#02254D",
+        "darkestGrayColor": "#303030",
+        "greenColor": "#76B041",
+        "lightBlueColor": "#0190D0",
+        "lightGrayColor": "#D8D8D8",
+        "lightestBlueColor": "#00FEFE",
+        "mediumGrayColor": "#979797",
+        "primaryColor": "#1676B7",
+        "secondaryColor": "#17BEBB",
+        "whiteBackgroundColor": "#fdfdfd",
+        "whiteColor": "#ffffff",
+        "yellowColor": "#FFC914",
+      }
+    }
   />
 </styled.span>
 `;
@@ -104,6 +221,25 @@ exports[`correctly renders password input 2`] = `
 exports[`correctly renders search input 1`] = `
 <styled.span
   disabled={false}
+  theme={
+    Object {
+      "blackColor": "#000000",
+      "darkBlueColor": "#02469B",
+      "darkGrayColor": "#4A4A4A",
+      "darkestBlueColor": "#02254D",
+      "darkestGrayColor": "#303030",
+      "greenColor": "#76B041",
+      "lightBlueColor": "#0190D0",
+      "lightGrayColor": "#D8D8D8",
+      "lightestBlueColor": "#00FEFE",
+      "mediumGrayColor": "#979797",
+      "primaryColor": "#1676B7",
+      "secondaryColor": "#17BEBB",
+      "whiteBackgroundColor": "#fdfdfd",
+      "whiteColor": "#ffffff",
+      "yellowColor": "#FFC914",
+    }
+  }
 >
   <styled.span>
     <FontAwesomeIcon
@@ -160,9 +296,29 @@ exports[`correctly renders search input 1`] = `
       }
     }
     type="search"
+    width={200}
   />
   <styled.span
     disabled={false}
+    theme={
+      Object {
+        "blackColor": "#000000",
+        "darkBlueColor": "#02469B",
+        "darkGrayColor": "#4A4A4A",
+        "darkestBlueColor": "#02254D",
+        "darkestGrayColor": "#303030",
+        "greenColor": "#76B041",
+        "lightBlueColor": "#0190D0",
+        "lightGrayColor": "#D8D8D8",
+        "lightestBlueColor": "#00FEFE",
+        "mediumGrayColor": "#979797",
+        "primaryColor": "#1676B7",
+        "secondaryColor": "#17BEBB",
+        "whiteBackgroundColor": "#fdfdfd",
+        "whiteColor": "#ffffff",
+        "yellowColor": "#FFC914",
+      }
+    }
   />
 </styled.span>
 `;
@@ -170,6 +326,25 @@ exports[`correctly renders search input 1`] = `
 exports[`renders normal Input correctly 1`] = `
 <styled.span
   disabled={false}
+  theme={
+    Object {
+      "blackColor": "#000000",
+      "darkBlueColor": "#02469B",
+      "darkGrayColor": "#4A4A4A",
+      "darkestBlueColor": "#02254D",
+      "darkestGrayColor": "#303030",
+      "greenColor": "#76B041",
+      "lightBlueColor": "#0190D0",
+      "lightGrayColor": "#D8D8D8",
+      "lightestBlueColor": "#00FEFE",
+      "mediumGrayColor": "#979797",
+      "primaryColor": "#1676B7",
+      "secondaryColor": "#17BEBB",
+      "whiteBackgroundColor": "#fdfdfd",
+      "whiteColor": "#ffffff",
+      "yellowColor": "#FFC914",
+    }
+  }
 >
   <styled.input
     disabled={false}
@@ -192,9 +367,29 @@ exports[`renders normal Input correctly 1`] = `
         "yellowColor": "#FFC914",
       }
     }
+    width={200}
   />
   <styled.span
     disabled={false}
+    theme={
+      Object {
+        "blackColor": "#000000",
+        "darkBlueColor": "#02469B",
+        "darkGrayColor": "#4A4A4A",
+        "darkestBlueColor": "#02254D",
+        "darkestGrayColor": "#303030",
+        "greenColor": "#76B041",
+        "lightBlueColor": "#0190D0",
+        "lightGrayColor": "#D8D8D8",
+        "lightestBlueColor": "#00FEFE",
+        "mediumGrayColor": "#979797",
+        "primaryColor": "#1676B7",
+        "secondaryColor": "#17BEBB",
+        "whiteBackgroundColor": "#fdfdfd",
+        "whiteColor": "#ffffff",
+        "yellowColor": "#FFC914",
+      }
+    }
   />
 </styled.span>
 `;
