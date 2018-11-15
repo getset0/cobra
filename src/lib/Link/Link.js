@@ -7,6 +7,7 @@ const Link = styled.a`
   color: ${props => props.theme.primaryColor};
   font-weight: 400;
   transition: opacity .2s ease-out;
+  cursor: pointer;
 
   &:visited {
     color: ${props => props.theme.primaryColor};
