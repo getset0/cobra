@@ -73,7 +73,7 @@ export const TabItem = styled.div`
           transform: translateX(0px);
         `
       : css`
-          transform: translateX(10000px);
+          transform: translateX(3000px);
         `}
 `;
 
