@@ -8,7 +8,6 @@ export const TableHeader = styled.th`
   padding-bottom: 14px;
   text-align: left;
   font-weight: 600;
-  font-size: 1.25em;
   color: ${props => props.theme.primaryColor};
 `;
 
