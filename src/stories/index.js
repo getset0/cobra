@@ -37,19 +37,23 @@ const testTabItems = [
   {
     title: "ABCTABTAB",
     contents: (
-      <div>ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC</div>
+      <div style={{ backgroundColor: "red" }}>
+        ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC ABC
+      </div>
     )
   },
   {
     title: "DEF",
     contents: (
-      <div>DEF ABC DEF DEF DEF DEF DEF DEF DEF DEFDEFDEFDEFDEFDEFDEFDEFDEF</div>
+      <div style={{ backgroundColor: "blue" }}>
+        DEF ABC DEF DEF DEF DEF DEF DEF DEF DEFDEFDEFDEFDEFDEFDEFDEFDEF
+      </div>
     )
   },
   {
     title: "GHIJ",
     contents: (
-      <div>
+      <div style={{ backgroundColor: "yellow" }}>
         GHIGHIGHIGHIGHIGHIGHIGHIGHIGHI GHIGHIGHIGHIGHIGHIGHIGHIGHIGHI
         GHIGHIGHIGHIGHIGHIGHIGHIGHIGHI GHIGHIGHIGHIGHIGHIGHIGHIGHIGHI
       </div>
