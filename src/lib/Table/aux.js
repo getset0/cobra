@@ -9,7 +9,7 @@ export const TableHeader = styled.th`
   text-align: left;
   font-weight: 600;
   font-size: 1.25em;
-  color: ${props => props.theme.primaryColor}
+  color: ${props => props.theme.primaryColor};
 `;
 
 TableHeader.propTypes = {
@@ -40,4 +40,5 @@ TableRow.defaultProps = {
 
 export const TableData = styled.td`
   padding: 12px 6px;
+  text-align: left;
 `;
