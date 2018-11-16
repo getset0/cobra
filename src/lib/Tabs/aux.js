@@ -52,10 +52,8 @@ TabButton.defaultProps = {
 };
 
 export const TabItems = styled.div`
-  position: relative;
-  min-height: 160px;
+  width: 100%;
   height: 100%;
-  overflow: hidden;
 `;
 
 TabButtons.propTypes = {
@@ -65,7 +63,6 @@ TabButtons.propTypes = {
 export const TabItem = styled.div`
   position: absolute;
   transition: transform 350ms ease;
-  height: 100%;
   width: 100%;
   ${props =>
     props.isSelected
@@ -73,7 +70,7 @@ export const TabItem = styled.div`
           transform: translateX(0px);
         `
       : css`
-          transform: translateX(3000px);
+          transform: translateX(-3000px);
         `}
 `;
 
