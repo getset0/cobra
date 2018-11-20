@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders default message correctly 1`] = `
-<styled.div
+<Styled(CustomCard)
   backgroundColor="lightblue"
   textColor="royalblue"
   theme={
@@ -62,11 +62,11 @@ exports[`renders default message correctly 1`] = `
       transform={null}
     />
   </styled.div>
-</styled.div>
+</Styled(CustomCard)>
 `;
 
 exports[`renders error message correctly 1`] = `
-<styled.div
+<Styled(CustomCard)
   backgroundColor="lightcoral"
   textColor="firebrick"
   theme={
@@ -127,11 +127,11 @@ exports[`renders error message correctly 1`] = `
       transform={null}
     />
   </styled.div>
-</styled.div>
+</Styled(CustomCard)>
 `;
 
 exports[`renders success message correctly 1`] = `
-<styled.div
+<Styled(CustomCard)
   backgroundColor="lightgreen"
   textColor="seagreen"
   theme={
@@ -192,11 +192,11 @@ exports[`renders success message correctly 1`] = `
       transform={null}
     />
   </styled.div>
-</styled.div>
+</Styled(CustomCard)>
 `;
 
 exports[`renders warning message correctly 1`] = `
-<styled.div
+<Styled(CustomCard)
   backgroundColor="khaki"
   textColor="tomato"
   theme={
@@ -257,5 +257,5 @@ exports[`renders warning message correctly 1`] = `
       transform={null}
     />
   </styled.div>
-</styled.div>
+</Styled(CustomCard)>
 `;

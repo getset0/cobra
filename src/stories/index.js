@@ -139,6 +139,14 @@ storiesOf("Card", module)
         I am a blue card with white text
       </Card>
     </div>
+  ))
+  .add("Card w/ Title", () => (
+    <div style={{ padding: "20px" }}>
+      <Card title="Nice title">I am inside a card</Card>
+      <Card title="Card title">I am a card</Card>
+      <Card title="Title">I am another card</Card>
+      <Card title={<h1>I am a custom title</h1>}>I am another card</Card>
+    </div>
   ));
 
 storiesOf("Typography", module)
