@@ -49,8 +49,8 @@ exports[`renders header correctly 1`] = `
       "displayName": "Styled(CustomHeader)",
       "propTypes": Object {
         "backgroundColor": [Function],
-        "headerCustomRight": [Function],
         "logo": [Function],
+        "rightElement": [Function],
         "theme": [Function],
         "user": [Function],
       },

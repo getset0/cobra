@@ -9,12 +9,15 @@ exports[`renders List with ListItems correctly 1`] = `
       "componentStyle": ComponentStyle {
         "componentId": "sc-bwzfXH",
         "isStatic": false,
-        "lastClassName": "daEYVW",
+        "lastClassName": "iOPXzR",
         "rules": Array [
           "
   list-style: none;
   margin: 0;
   padding: 0px;
+  ",
+          [Function],
+          "
 
   > li {
     display: flex;
@@ -31,14 +34,21 @@ exports[`renders List with ListItems correctly 1`] = `
     ",
           [Function],
           "
+    ",
+          [Function],
+          "
   }
 ",
         ],
+      },
+      "defaultProps": Object {
+        "orientation": "vertical",
       },
       "displayName": "styled.ul",
       "propTypes": Object {
         "center": [Function],
         "end": [Function],
+        "orientation": [Function],
         "spaceAround": [Function],
         "spaceBetween": [Function],
       },
@@ -51,6 +61,7 @@ exports[`renders List with ListItems correctly 1`] = `
     }
   }
   forwardedRef={null}
+  orientation="vertical"
 >
   <styled.li
     theme={
