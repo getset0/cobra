@@ -85,9 +85,26 @@ Text textText textText textText textText textText textText textText textText tex
 
 storiesOf("Header", module)
   .add("Simple", () => <Header />)
+  .add("List", () => (
+    <Header
+      rightElement={
+        <List orientation="horizontal">
+          <ListItem>
+            <Link href="#">Item</Link>
+          </ListItem>
+          <ListItem>
+            <Link href="#">Item</Link>
+          </ListItem>
+          <ListItem>
+            <Link href="#">Item</Link>
+          </ListItem>
+        </List>
+      }
+    />
+  ))
   .add("Dropdown", () => (
     <Header
-      headerCustomRight={
+      rightElement={
         <Dropdown withBorder>
           {({ isOpen, handleTriggerClick }) => (
             <React.Fragment>
@@ -264,6 +281,13 @@ const CustomListItem = () => (
 storiesOf("List", module)
   .add("Text", () => (
     <List>
+      <ListItem>Item</ListItem>
+      <ListItem>Item</ListItem>
+      <ListItem>Item</ListItem>
+    </List>
+  ))
+  .add("Horizontal", () => (
+    <List orientation="horizontal">
       <ListItem>Item</ListItem>
       <ListItem>Item</ListItem>
       <ListItem>Item</ListItem>
