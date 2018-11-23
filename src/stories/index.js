@@ -146,6 +146,15 @@ storiesOf("Card", module)
       <Card title="Card title">I am a card</Card>
       <Card title="Title">I am another card</Card>
       <Card title={<h1>I am a custom title</h1>}>I am another card</Card>
+      <Card
+        title={<h1>I am a custom title</h1>}
+        subtitle={<h3>I am a custom subtitle</h3>}
+      >
+        I am another card
+      </Card>
+      <Card title="My title" subtitle="My Subtitle">
+        I am another card
+      </Card>
     </div>
   ));
 

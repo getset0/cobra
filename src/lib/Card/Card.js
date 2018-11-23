@@ -5,15 +5,28 @@ import { theme } from "../constants";
 
 const CardTitle = styled.h3`
   color: ${props => props.theme.primaryColor};
-  padding-bottom: 3px;
+  margin-bottom: ${props => (props.subtitle ? ".3em" : ".575em")};
 `;
 
-const CustomCard = ({ title, children, theme, ...props }) => (
+const CardSubtitle = styled.span`
+  color: ${props => props.theme.mediumGrayColor};
+  display: block;
+  margin-bottom: 1em;
+`;
+
+const CustomCard = ({ title, subtitle, children, theme, ...props }) => (
   <div {...props}>
     {title && typeof title === "string" ? (
-      <CardTitle theme={theme}>{title}</CardTitle>
+      <CardTitle theme={theme} subtitle={!!subtitle}>
+        {title}
+      </CardTitle>
     ) : (
       title
+    )}
+    {subtitle && typeof subtitle === "string" ? (
+      <CardSubtitle theme={theme}>{subtitle}</CardSubtitle>
+    ) : (
+      subtitle
     )}
     {children}
   </div>
@@ -21,7 +34,7 @@ const CustomCard = ({ title, children, theme, ...props }) => (
 
 const Card = styled(CustomCard)`
     margin: 15px;
-    padding: 25px;
+    padding: 1.4em;
     background: ${props =>
     props.backgroundColor || props.theme.whiteBackgroundColor};
     color: ${props => props.textColor || props.theme.darkGrayColor}
