@@ -6,6 +6,6 @@ A library of React components created with [Create React App](https://github.com
 
 Run the following command:
 
-`npm install cobra`
+`npm install cobra-ui`
 or
-`yarn add cobra`
+`yarn add cobra-ui`
