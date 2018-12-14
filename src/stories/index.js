@@ -29,6 +29,7 @@ import {
   TableData,
   Table,
   Input,
+  CobraInput,
   Modal,
   Message
 } from "../lib";
@@ -427,15 +428,43 @@ storiesOf("Icon", module).add("Icon", () => (
 ));
 
 storiesOf("Input", module)
-  .add("Input Text", () => (
+  .add("Input Text/Password", () => (
     <React.Fragment>
-      <Input placeholder="test" />
-      <Input placeholder="test" disabled />
+      <Input label="Email" placeholder="type@email.com"/>
+      <Input label="Password" type="password" placeholder="******"/>
     </React.Fragment>
   ))
-  .add("Input Search", () => <Input placeholder="Search" type="search" />)
-  .add("Input Password", () => <Input placeholder="password" type="password" />)
-  .add("Input Number", () => <Input placeholder="number" type="number" />);
+  .add("Input Number", () => (
+    <React.Fragment>
+      <Input label="Age" type="number" placeholder="18"/>
+    </React.Fragment>
+  ))
+  .add("Input without label", () => (
+    <React.Fragment>
+      <Input placeholder="Type Here"/>
+    </React.Fragment>
+  ))
+  .add("Input errored", () => (
+    <React.Fragment>
+      <Input error="Email can't be blank" label="Email" placeholder="type@email.com" />
+    </React.Fragment>
+  ))
+  .add("Input valid", () => (
+    <React.Fragment>
+      <Input valid={true} label="Email" value="my@email.com" placeholder="type@email.com" />
+    </React.Fragment>
+  ));
+
+storiesOf("CobraInput", module)
+  .add("CobraInput Text", () => (
+    <React.Fragment>
+      <CobraInput placeholder="test" />
+      <CobraInput placeholder="test" disabled />
+    </React.Fragment>
+  ))
+  .add("CobraInput Search", () => <CobraInput placeholder="Search" type="search" />)
+  .add("CobraInput Password", () => <CobraInput placeholder="password" type="password" />)
+  .add("CobraInput Number", () => <CobraInput placeholder="number" type="number" />);
 
 class TestModal extends React.Component {
   state = {

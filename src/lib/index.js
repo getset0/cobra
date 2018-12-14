@@ -6,6 +6,7 @@ import Link from "./Link/Link";
 import Header from "./Header/Header";
 import Card from "./Card/Card";
 import Input from "./Input/Input";
+import CobraInput from "./CobraInput/CobraInput";
 import Modal from "./Modal/Modal";
 import Message from "./Message/Message";
 import Tabs from "./Tabs/Tabs";
@@ -47,6 +48,7 @@ export {
   TableData,
   Table,
   Input,
+  CobraInput,
   Modal,
   Message,
   theme

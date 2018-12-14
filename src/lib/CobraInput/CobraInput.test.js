@@ -1,22 +1,22 @@
 import React from "react";
-import Input from "./Input";
+import CobraInput from "./CobraInput";
 import "jest-styled-components";
 import { shallow } from "enzyme";
 import toJson from "enzyme-to-json";
 
 it("renders Input without crashing", () => {
-  shallow(<Input />);
+  shallow(<CobraInput />);
 });
 
 it("renders normal Input correctly", () => {
-  const wrapper = shallow(<Input />);
+  const wrapper = shallow(<CobraInput />);
   const tree = toJson(wrapper);
   expect(tree).toMatchSnapshot();
 });
 
 it("correctly renders disabled input", () => {
   const wrapper = shallow(
-    <Input placeholder="test" disabled />
+    <CobraInput placeholder="test" disabled />
   );
   const tree = toJson(wrapper);
   expect(tree).toMatchSnapshot();
@@ -24,7 +24,7 @@ it("correctly renders disabled input", () => {
 
 it("correctly renders search input", () => {
   const wrapper = shallow(
-    <Input placeholder="test" type="search" />
+    <CobraInput placeholder="test" type="search" />
   );
   const tree = toJson(wrapper);
   expect(tree).toMatchSnapshot();
@@ -32,7 +32,7 @@ it("correctly renders search input", () => {
 
 it("correctly renders password input", () => {
   const wrapper = shallow(
-    <Input placeholder="test" type="password" />
+    <CobraInput placeholder="test" type="password" />
   );
   const tree = toJson(wrapper);
   expect(tree).toMatchSnapshot();
@@ -40,7 +40,7 @@ it("correctly renders password input", () => {
 
 it("correctly renders password input", () => {
   const wrapper = shallow(
-    <Input placeholder="test" type="number" />
+    <CobraInput placeholder="test" type="number" />
   );
   const tree = toJson(wrapper);
   expect(tree).toMatchSnapshot();
