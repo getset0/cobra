@@ -46,8 +46,8 @@ const CustomInput = ({
 );
 
 CustomInput.propTypes = {
-  label: PropTypes.oneOf([ PropTypes.string, PropTypes.element ]),
-  error: PropTypes.oneOf([ PropTypes.string, PropTypes.element ]),
+  label: PropTypes.oneOfType([ PropTypes.string, PropTypes.element ]),
+  error: PropTypes.oneOfType([ PropTypes.string, PropTypes.element ]),
   valid: PropTypes.bool,
   width: PropTypes.number
 };

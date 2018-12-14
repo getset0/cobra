@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders Input with label 1`] = `
+<styled.span
+  width={240}
+>
+  <styled.span>
+    test label
+  </styled.span>
+  <styled.input />
+</styled.span>
+`;
+
+exports[`renders an errored input 1`] = `
+<styled.span
+  width={240}
+>
+  <styled.input
+    error="field can't be blank"
+  />
+  <styled.span>
+    field can't be blank
+  </styled.span>
+</styled.span>
+`;
+
+exports[`renders an validated input 1`] = `
+<styled.span
+  width={240}
+>
+  <styled.input
+    valid={true}
+  />
+</styled.span>
+`;
+
+exports[`renders normal Input correctly 1`] = `
+<styled.span
+  width={240}
+>
+  <styled.input />
+</styled.span>
+`;
