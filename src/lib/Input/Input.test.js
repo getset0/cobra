@@ -8,40 +8,28 @@ it("renders Input without crashing", () => {
   shallow(<Input />);
 });
 
+
 it("renders normal Input correctly", () => {
   const wrapper = shallow(<Input />);
   const tree = toJson(wrapper);
   expect(tree).toMatchSnapshot();
 });
 
-it("correctly renders disabled input", () => {
-  const wrapper = shallow(
-    <Input placeholder="test" disabled />
-  );
+it("renders an errored input", () => {
+  const wrapper = shallow(<Input error="field can't be blank" />);
   const tree = toJson(wrapper);
   expect(tree).toMatchSnapshot();
 });
 
-it("correctly renders search input", () => {
-  const wrapper = shallow(
-    <Input placeholder="test" type="search" />
-  );
+it("renders an validated input", () => {
+  const wrapper = shallow(<Input valid={true} />);
   const tree = toJson(wrapper);
   expect(tree).toMatchSnapshot();
 });
 
-it("correctly renders password input", () => {
-  const wrapper = shallow(
-    <Input placeholder="test" type="password" />
-  );
+it("renders Input with label", () => {
+  const wrapper = shallow(<Input label="test label" />);
   const tree = toJson(wrapper);
   expect(tree).toMatchSnapshot();
 });
 
-it("correctly renders password input", () => {
-  const wrapper = shallow(
-    <Input placeholder="test" type="number" />
-  );
-  const tree = toJson(wrapper);
-  expect(tree).toMatchSnapshot();
-});
