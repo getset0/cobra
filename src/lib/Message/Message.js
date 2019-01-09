@@ -21,10 +21,15 @@ const MessageInnerWrapper = styled.div`
   align-items: center;
 `;
 
-const Message = ({ type, text, ...props }) => {
+const Message = ({ type, text, hasShadow, ...props }) => {
   const messageTypes = {
     warning: (
-      <Card backgroundColor="khaki" textColor="tomato" {...props}>
+      <Card
+        backgroundColor="khaki"
+        hasShadow={hasShadow}
+        textColor="tomato"
+        {...props}
+      >
         <MessageInnerWrapper>
           <FontAwesomeIcon style={iconStyles} icon={faExclamationCircle} />
           {text}
@@ -32,7 +37,12 @@ const Message = ({ type, text, ...props }) => {
       </Card>
     ),
     error: (
-      <Card backgroundColor="lightcoral" textColor="firebrick" {...props}>
+      <Card
+        backgroundColor="lightcoral"
+        hasShadow={hasShadow}
+        textColor="firebrick"
+        {...props}
+      >
         <MessageInnerWrapper>
           <FontAwesomeIcon style={iconStyles} icon={faTimesCircle} />
           {text}
@@ -40,7 +50,12 @@ const Message = ({ type, text, ...props }) => {
       </Card>
     ),
     success: (
-      <Card backgroundColor="lightgreen" textColor="seagreen" {...props}>
+      <Card
+        backgroundColor="lightgreen"
+        hasShadow={hasShadow}
+        textColor="seagreen"
+        {...props}
+      >
         <MessageInnerWrapper>
           <FontAwesomeIcon style={iconStyles} icon={faCheckCircle} />
           {text}
@@ -48,7 +63,12 @@ const Message = ({ type, text, ...props }) => {
       </Card>
     ),
     default: (
-      <Card backgroundColor="lightblue" textColor="royalblue" {...props}>
+      <Card
+        backgroundColor="lightblue"
+        hasShadow={hasShadow}
+        textColor="royalblue"
+        {...props}
+      >
         <MessageInnerWrapper>
           <FontAwesomeIcon style={iconStyles} icon={faInfoCircle} />
           {text}
@@ -63,11 +83,13 @@ Message.propTypes = {
   type: PropTypes.oneOf([ "warning", "error", "success", "default" ]),
   width: PropTypes.number,
   theme: PropTypes.object,
-  text: PropTypes.string
+  text: PropTypes.string,
+  hasShadow: PropTypes.bool
 };
 
 Message.defaultProps = {
   theme: theme,
+  hasShadow: true,
   type: "default"
 };
 

@@ -31,7 +31,8 @@ import {
   Input,
   CobraInput,
   Modal,
-  Message
+  Message,
+  Textarea
 } from "../lib";
 
 const testTabItems = [
@@ -211,6 +212,12 @@ storiesOf("Message", module).add("Messages", () => (
     <Message text="I am a success" type="success" />
     <Message text="I am an error" type="error" />
     <Message text="Test" width={100} />
+
+    <Message text="I am a default" hasShadow={false} />
+    <Message text="I am a warning" type="warning" hasShadow={false} />
+    <Message text="I am a success" type="success" hasShadow={false} />
+    <Message text="I am an error" type="error" hasShadow={false} />
+    <Message text="Test" width={100} hasShadow={false} />
   </React.Fragment>
 ));
 storiesOf("Button", module)
@@ -430,29 +437,44 @@ storiesOf("Icon", module).add("Icon", () => (
 storiesOf("Input", module)
   .add("Input Text/Password", () => (
     <React.Fragment>
-      <Input label="Email" placeholder="type@email.com"/>
-      <Input label="Password" type="password" placeholder="******"/>
+      <Input label="Email" placeholder="type@email.com" />
+      <Input label="Password" type="password" placeholder="******" />
     </React.Fragment>
   ))
   .add("Input Number", () => (
     <React.Fragment>
-      <Input label="Age" type="number" placeholder="18"/>
+      <Input label="Age" type="number" placeholder="18" />
     </React.Fragment>
   ))
   .add("Input without label", () => (
     <React.Fragment>
-      <Input placeholder="Type Here"/>
+      <Input placeholder="Type Here" />
     </React.Fragment>
   ))
   .add("Input errored", () => (
     <React.Fragment>
-      <Input error="Email can't be blank" label="Email" placeholder="type@email.com" />
+      <Input
+        error="Email can't be blank"
+        label="Email"
+        placeholder="type@email.com"
+      />
     </React.Fragment>
   ))
   .add("Input valid", () => (
     <React.Fragment>
-      <Input valid={true} label="Email" value="my@email.com" placeholder="type@email.com" />
+      <Input
+        valid={true}
+        label="Email"
+        value="my@email.com"
+        placeholder="type@email.com"
+      />
     </React.Fragment>
+  ));
+
+storiesOf("Textarea", module)
+  .add("Textarea", () => <Textarea placeholder="Your text ..." label="Text" />)
+  .add("Text area full width", () => (
+    <Textarea placeholder="Your text ..." label="Text" width="100%" />
   ));
 
 storiesOf("CobraInput", module)
@@ -462,9 +484,15 @@ storiesOf("CobraInput", module)
       <CobraInput placeholder="test" disabled />
     </React.Fragment>
   ))
-  .add("CobraInput Search", () => <CobraInput placeholder="Search" type="search" />)
-  .add("CobraInput Password", () => <CobraInput placeholder="password" type="password" />)
-  .add("CobraInput Number", () => <CobraInput placeholder="number" type="number" />);
+  .add("CobraInput Search", () => (
+    <CobraInput placeholder="Search" type="search" />
+  ))
+  .add("CobraInput Password", () => (
+    <CobraInput placeholder="password" type="password" />
+  ))
+  .add("CobraInput Number", () => (
+    <CobraInput placeholder="number" type="number" />
+  ));
 
 class TestModal extends React.Component {
   state = {

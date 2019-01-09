@@ -1,5 +1,5 @@
 import React from "react";
-import Input from "./Input";
+import Input from "./BaseInput";
 import "jest-styled-components";
 import { shallow } from "enzyme";
 import toJson from "enzyme-to-json";
@@ -8,9 +8,14 @@ it("renders Input without crashing", () => {
   shallow(<Input />);
 });
 
-
 it("renders normal Input correctly", () => {
   const wrapper = shallow(<Input />);
+  const tree = toJson(wrapper);
+  expect(tree).toMatchSnapshot();
+});
+
+it("renders Textarea correctly", () => {
+  const wrapper = shallow(<Input isTextarea={true} />);
   const tree = toJson(wrapper);
   expect(tree).toMatchSnapshot();
 });
@@ -32,4 +37,3 @@ it("renders Input with label", () => {
   const tree = toJson(wrapper);
   expect(tree).toMatchSnapshot();
 });
-

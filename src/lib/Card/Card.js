@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import PropTypes from "prop-types";
 import { theme } from "../constants";
 
@@ -40,9 +40,14 @@ const Card = styled(CustomCard)`
     color: ${props => props.textColor || props.theme.darkGrayColor}
     overflow: hidden;
     border-radius: 5px;
-    box-shadow: 1px 2px 10px 1px ${props => props.theme.lightGrayColor};
+
     width: ${props => props.width}px;
     height: ${props => props.height}px;
+    ${props =>
+    props.hasShadow &&
+      css`
+        box-shadow: 1px 2px 10px 1px ${props => props.theme.lightGrayColor};
+      `}
 `;
 
 Card.propTypes = {
@@ -51,6 +56,7 @@ Card.propTypes = {
   width: PropTypes.number,
   height: PropTypes.number,
   theme: PropTypes.object,
+  hasShadow: PropTypes.bool,
   children: PropTypes.any.isRequired,
   title: PropTypes.oneOfType([
     PropTypes.string,
@@ -60,7 +66,8 @@ Card.propTypes = {
 };
 
 Card.defaultProps = {
-  theme: theme
+  theme: theme,
+  hasShadow: true
 };
 
 export default Card;
