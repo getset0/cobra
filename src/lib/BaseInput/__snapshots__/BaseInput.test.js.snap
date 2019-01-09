@@ -11,6 +11,14 @@ exports[`renders Input with label 1`] = `
 </styled.span>
 `;
 
+exports[`renders Textarea correctly 1`] = `
+<styled.span
+  width={240}
+>
+  <styled.textarea />
+</styled.span>
+`;
+
 exports[`renders an errored input 1`] = `
 <styled.span
   width={240}

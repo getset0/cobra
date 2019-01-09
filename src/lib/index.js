@@ -12,6 +12,7 @@ import Message from "./Message/Message";
 import Tabs from "./Tabs/Tabs";
 import Dropdown from "./Dropdown/Dropdown";
 import Table from "./Table/Table";
+import Textarea from "./Textarea/Textarea";
 import { TabButtons, TabButton, TabItems, TabItem } from "./Tabs/aux";
 import { DropdownTrigger, DropdownBody, DropdownButton } from "./Dropdown/aux";
 import { TableHeader, TableRow, TableData } from "./Table/aux";
@@ -47,6 +48,7 @@ export {
   TableRow,
   TableData,
   Table,
+  Textarea,
   Input,
   CobraInput,
   Modal,
