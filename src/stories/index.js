@@ -465,7 +465,11 @@ storiesOf("Input", module)
     </React.Fragment>
   ));
 
-storiesOf("Textarea", module).add("Textarea", () => <Textarea placeholder="Your text ..." label="Text" />);
+storiesOf("Textarea", module)
+  .add("Textarea", () => <Textarea placeholder="Your text ..." label="Text" />)
+  .add("Text area full width", () => (
+    <Textarea placeholder="Your text ..." label="Text" width="100%" />
+  ));
 
 storiesOf("CobraInput", module)
   .add("CobraInput Text", () => (

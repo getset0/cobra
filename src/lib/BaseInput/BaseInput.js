@@ -25,6 +25,7 @@ const Input = styled.input`
 const Textarea = styled.textarea`
   padding: 5px 10px;
   font-size: 16px;
+  min-height: 18px;
   resize: vertical;
   ${props =>
     props.error
