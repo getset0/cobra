@@ -212,6 +212,12 @@ storiesOf("Message", module).add("Messages", () => (
     <Message text="I am a success" type="success" />
     <Message text="I am an error" type="error" />
     <Message text="Test" width={100} />
+
+    <Message text="I am a default" hasShadow={false} />
+    <Message text="I am a warning" type="warning" hasShadow={false} />
+    <Message text="I am a success" type="success" hasShadow={false} />
+    <Message text="I am an error" type="error" hasShadow={false} />
+    <Message text="Test" width={100} hasShadow={false} />
   </React.Fragment>
 ));
 storiesOf("Button", module)

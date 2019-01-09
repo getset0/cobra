@@ -3,6 +3,7 @@
 exports[`renders default message correctly 1`] = `
 <Styled(CustomCard)
   backgroundColor="lightblue"
+  hasShadow={true}
   textColor="royalblue"
   theme={
     Object {
@@ -68,6 +69,7 @@ exports[`renders default message correctly 1`] = `
 exports[`renders error message correctly 1`] = `
 <Styled(CustomCard)
   backgroundColor="lightcoral"
+  hasShadow={true}
   textColor="firebrick"
   theme={
     Object {
@@ -133,6 +135,7 @@ exports[`renders error message correctly 1`] = `
 exports[`renders success message correctly 1`] = `
 <Styled(CustomCard)
   backgroundColor="lightgreen"
+  hasShadow={true}
   textColor="seagreen"
   theme={
     Object {
@@ -198,6 +201,7 @@ exports[`renders success message correctly 1`] = `
 exports[`renders warning message correctly 1`] = `
 <Styled(CustomCard)
   backgroundColor="khaki"
+  hasShadow={true}
   textColor="tomato"
   theme={
     Object {
