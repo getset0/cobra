@@ -1,18 +1,19 @@
 export const theme = {
   // colors
-  primaryColor: "#1676B7",
+  primaryColor: "#2970FF",
   secondaryColor: "#17BEBB",
-  yellowColor: "#FFC914",
-  greenColor: "#76B041",
+  yellowColor: "#FFD16A",
+  greenColor: "#2ED8A3",
   lightestBlueColor: "#00FEFE",
-  lightBlueColor: "#0190D0",
-  darkBlueColor: "#02469B",
-  darkestBlueColor: "#02254D",
+  lightBlueColor: "#7EADFF",
+  darkBlueColor: "#3D5873",
+  darkestBlueColor: "#091440",
   whiteColor: "#ffffff",
   whiteBackgroundColor: "#fdfdfd",
-  lightGrayColor: "#D8D8D8",
-  mediumGrayColor: "#979797",
+  lightGrayColor: "#F3F5F6",
+  mediumGrayColor: "#8997A5",
   darkGrayColor: "#4A4A4A",
   darkestGrayColor: "#303030",
-  blackColor: "#000000"
+  blackColor: "#000000",
+  errorColor: "#ED6D47"
 };
