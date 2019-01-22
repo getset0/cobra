@@ -1,26 +1,10 @@
 @font-face {
-  font-family: "Orbitron-Black";
-  src: local("Orbitron-Black"), url(./fonts/Orbitron-Black.ttf) format("ttf");
-}
-
-@font-face {
-  font-family: "Orbitron-Bold";
-  src: local("Orbitron-Bold"), url(./fonts/Orbitron-Bold.ttf) format("ttf");
-}
-
-@font-face {
-  font-family: "Orbitron-Medium";
-  src: local("Orbitron-Medium"), url(./fonts/Orbitron-Medium.ttf) format("ttf");
-}
-
-@font-face {
-  font-family: "Orbitron-Regular";
-  src: local("Orbitron-Regular"),
-    url(./fonts/Orbitron-Regular.ttf) format("ttf");
+  font-family: "Source Sans Pro";
+  src: local("Source Sans Pro"), url(./fonts/source-sans-pro/source-sans-pro-v9-latin-regular.woff) format("woff")
 }
 
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   font-size: 14px;
   line-height: 1em;
   font-weight: 300;
@@ -42,7 +26,7 @@ h2,
 h3 {
   margin: 0 0 10px;
   font-weight: 600;
-  font-family: "Orbitron-Regular";
+  font-family: "Source Sans Pro", sans-serif;
 }
 
 h1 {

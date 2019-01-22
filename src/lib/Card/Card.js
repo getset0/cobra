@@ -39,7 +39,6 @@ const Card = styled(CustomCard)`
     props.backgroundColor || props.theme.whiteBackgroundColor};
     color: ${props => props.textColor || props.theme.darkGrayColor}
     overflow: hidden;
-    border-radius: 5px;
 
     width: ${props => props.width}px;
     height: ${props => props.height}px;
@@ -67,7 +66,7 @@ Card.propTypes = {
 
 Card.defaultProps = {
   theme: theme,
-  hasShadow: true
+  hasShadow: false
 };
 
 export default Card;

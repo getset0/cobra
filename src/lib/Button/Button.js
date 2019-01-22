@@ -4,7 +4,7 @@ import { theme } from "../constants";
 
 const Button = styled.button`
   border-radius: 5px;
-  font-weight: 600;
+  font-weight: 400;
   letter-spacing: 1px;
   text-decoration: none;
   white-space: nowrap;
@@ -46,7 +46,7 @@ const Button = styled.button`
     `}
 
   color: ${props => props.theme.primaryColor};
-  border: 2px solid ${props => props.theme.primaryColor};
+  border: 1px solid ${props => props.theme.primaryColor};
 
   ${props =>
     props.uppercase &&
