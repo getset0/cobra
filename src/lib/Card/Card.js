@@ -15,7 +15,7 @@ const CardSubtitle = styled.span`
 `;
 
 const CustomCard = ({ title, subtitle, children, theme, ...props }) => (
-  <div {...props}>
+  <div width={props.width} height={props.height}>
     {title && typeof title === "string" ? (
       <CardTitle theme={theme} subtitle={!!subtitle}>
         {title}
