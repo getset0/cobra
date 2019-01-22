@@ -4,7 +4,7 @@ import { theme } from "../constants";
 
 const Button = styled.button`
   border-radius: 5px;
-  font-weight: semi-bold;
+  font-weight: 400;
   letter-spacing: 1px;
   text-decoration: none;
   white-space: nowrap;
